@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1 class="logo">MyPortfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <section id="home" class="section home">
+    <div class="hero">
+      <img src="2.jpg" alt="Asad Profile" class="profile-img" />
+      <h2>Hello, I'm <span>Navya Sri</span></h2>
+      <p>Business Analyst Intern | Data Science Enthusiast | Python & SQL Developer</p>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate data and business analyst with strong skills in Python, SQL, machine learning, and Power BI.
+      My goal is to solve real-world problems using data insights and predictive modeling.
+    </p>
+  </section>
+
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Credit Card Fraud Detection</h3>
+        <p>Achieved 87% accuracy using ML to detect fraud. Used logistic regression, under-sampling, and feature engineering.</p>
+      </div>
+      <div class="project-card">
+        <h3>Student Performance Prediction</h3>
+        <p>Built a model with 96% accuracy to forecast academic performance. Managed data preprocessing and variable encoding.</p>
+      </div>
+      <div class="project-card">
+        <h3>Heart Disease Detection</h3>
+        <p>Created a secure, accurate ML model to predict heart disease with 91%+ accuracy. Included HIPAA-level data handling.</p>
+      </div>
+    </div>
+  </section>
+ <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Asad. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+ 
