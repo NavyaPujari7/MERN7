@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Login = () => {
-    const [userData,setUserdata]=useState({
+    const [userData,setUserData]= useState({
         email:"",
         password:""
-    })
-    const handleChange=()=>{
+    });
+    const handleChange=(e)=>{
         setUserData((prev)=>({...prev,[e.target.name]:e.target.value}));
-    }
+    };
     const handleSubmit=(e)=>{
         e.preventDefault();
         console.log(userData);
+    };
   return (
     <div>
         <form onSubmit={handleSubmit}>
@@ -18,6 +19,7 @@ const Login = () => {
             <input type="email"
             value={userData.email}
             name = "email"
+            Value={userData.email}
             onChange={handleChange}
             placeholder='Enter the email'/>
             <label>Password :</label>
@@ -28,7 +30,6 @@ const Login = () => {
             <button type='submit'>login</button>
         </form>  
     </div>
-  )
-}
-}
+  );
+};
 export default Login;

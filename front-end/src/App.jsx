@@ -51,7 +51,7 @@
 //   }
 // }
 // }
-import {Route, Routes} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Navbar from './component/Navbar'
 import Home from './pages/Home'
 import Services from './pages/Services'
@@ -60,6 +60,12 @@ import About from './pages/About'
 import Counter from './component/Counter'
 import UseStates from './Hooks/UseStates'
 import Login from './Auth/Login';
+import Hooks from './Hooks/Hook';
+import UseEffect from './Hooks/UseEffect'
+import UseEffectApi from './Hooks/UseEffectApi';
+import Signup from './Auth/signup';
+import UseRef from './Hooks/Useref';
+
 const App = () =>{
   
    return(    
@@ -71,10 +77,19 @@ const App = () =>{
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/services' element={<Services/>}/>
       <Route path='/counter' element={<Counter/>}/>
-      <Route path='/useState' element={<UseStates/>}/>
+      
       <Route path='/login' element={<Login/>}/>
-    </Routes>
+      <Route path='/signup' element={<Signup/>}/>
+
+    {/* Hooks */}
+    <Route path='/hook' element={<Hooks/>}>
+      <Route path='useEffect' element={<UseEffect/>}/>
+      <Route path='useState' element={<UseStates/>}/>
+      <Route path='useEffectApi' element={<UseEffectApi/>}/>
+      <Route path='useRef' element={<UseRef/>}/>
+      </Route>
+      </Routes>
     </>
-   )
-}
-export default App
+   );
+};
+export default App;

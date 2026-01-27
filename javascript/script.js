@@ -153,38 +153,165 @@
 // console.log(result1);
 
 //functions
-function add(){
-    console.log(10+20);
-}
-add();
-add = ()=>{
-    console.log(10+20);
-}
-add();
+// function add(){
+//     console.log(10+20);
+// }
+// add();
+// add = ()=>{
+//     console.log(10+20);
+// }
+// add();
 
-//Arrow Function
-var add = ()=>{
-        console.log(10+20); 
+// //Arrow Function
+// var add = ()=>{
+//         console.log(10+20); 
+//     }
+
+// //spread operator
+// var arr1=[1,2,3];
+// var arr2=[4,5,6];
+// var arr3=[...arr1,...arr2];
+// console.log(arr2);
+
+// //Destructuring operator
+// var [m1,m2,m3,m4,m5]=[89,90,99,96,87]
+// console.log(m1);
+// console.log(m2);
+// console.log(m3);
+// console.log(m4);
+// console.log(m5);
+// var {name,age,Dep,marks}={ 
+//     name:"navya",
+//     age:20,
+//     Dep:"CSD"
+// }
+// console.log(name);
+// console.log(age);
+// console.log(Dep);
+
+
+// let arrr = [10,20,30,40];
+// for(let i in arrr)
+// {
+//     console.log(i,arrr[i]);
+// }
+// var obj={
+//     name:"navya",
+//     agee:20
+// }
+// //for ... in
+// for(let i in obj)
+// {
+//     console.log(i,obj[i]);   
+// }
+// // for..of 
+// for(let val of arrr){
+//     console.log(val);
+// }
+
+
+//mapping method
+// let arr = [10,20,30,40];
+// //map
+// var double_arr=arr.map((i)=>(i*2));
+// console.log(double_arr);
+
+// //filter
+// let arry = [1,2,3,4];
+// var even = arry.filter((i)=>(i%2==0));
+// console.log(even);
+
+// //reduce
+// var total = arr.reduce((sum,i)=>(sum+i),0);
+// console.log(total);
+
+// var total_sum = arr.map((num)=>num*2).filter((num)=>(num%2===0)).reduce((sum,num)=>(sum+num),0);
+// console.log(total_sum);
+
+// var n =7;
+// var flag=true;
+// if(n<=1) flag = false;
+// else{
+//     for(let i=2;i<n/2;i++){
+//         if(n%i===0){
+//             flag=false;
+//             break;
+//         }
+//     }
+// }
+// console.log(flag?"prime":"not prime");
+
+// var name="Navya";
+// console.log(`My name ${name}`);
+
+// arr.forEach((value,index)=>{
+//     console.log(index,value);
+// })
+
+//callback function
+var add = (a,b,callback)=>{
+    var result=a+b;
+    callback(result);
+}
+add(10,20,(result)=>{console.log(result);});
+
+var main=(callback)=>{
+    console.log("I am main");
+    callback();
+}
+var demo =()=>{                //var main=(myfunction)=>
+    console.log("I am Demo");  //myfunction();
+}
+main(demo)
+
+//promises
+var promise = new Promise((resolve,reject)=>{
+    var success=true;  //we can give false (so it will give promise rejected)
+    if(success){
+        resolve("promise resolved");
     }
+    else{
+        reject("promise rejected");
+    }
+})
+promise.then((result)=>console.log(result))
+.catch((err)=>console.log(err));
+//  const getData =()=>{
+//     return fetch('https://jsonplaceholder.typicode.com/posts')
+//  }
+//  getData().then((result)=>result.json())
+//  .then((data)=>console.log(data))
+//  .catch((err)=>console.log(err));
 
-//spread operator
-var arr1=[1,2,3];
-var arr2=[4,5,6];
-var arr3=[...arr1,...arr2];
-console.log(arr2);
 
-//Destructuring operator
-var [m1,m2,m3,m4,m5]=[89,90,99,96,87]
-console.log(m1);
-console.log(m2);
-console.log(m3);
-console.log(m4);
-console.log(m5);
-var {name,age,Dep,marks}={ 
-    name:"navya",
-    age:20,
-    Dep:"CSD"
+
+//ASSERTSION ERROR HANDLING USING ASYNC AWAIT
+ const getData = async ()=>{
+    try{
+        var Response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        var data = await Response.json();
+        console.log(data);
+    }catch (err) {
+        console.log(err);
+    }
 }
-console.log(name);
-console.log(age);
-console.log(Dep);
+getData();
+
+
+// //promise using set timmer
+// var promise = new Promise((resolve,reject)=>{
+//     var success=true;  //we can give false (so it will give promise rejected)
+//     if(success){
+//         setTimeout(()=>{
+//         resolve("promise resolved")
+//         },10000);
+//     }
+//     else{
+//         reject("promise rejected");
+//     }
+// })
+
+
+
+
+
