@@ -75,6 +75,6 @@ const App = () =>{
       <Route path='/login' element={<Login/>}/>
     </Routes>
     </>
-   )npm 
+   )
 }
 export default App
