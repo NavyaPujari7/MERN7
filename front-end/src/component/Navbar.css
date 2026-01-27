@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+    ul{
+        list-style:none;
+        background-color: chocolate;
+        padding: 10px;
+    }
+    li{
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .link{
+        text-decoration: none;\padding: 5px;
+        border-radiys: 10px;
+        text-decoration: none;
+        color: black
+    }
+    .link:hover{
+        color: White;
+    }
