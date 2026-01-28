@@ -65,6 +65,7 @@ import UseEffect from './Hooks/UseEffect'
 import UseEffectApi from './Hooks/UseEffectApi';
 import Signup from './Auth/signup';
 import UseRef from './Hooks/Useref';
+import UseReducer from './Hooks/UseReducer';
 
 const App = () =>{
   
@@ -87,6 +88,7 @@ const App = () =>{
       <Route path='useState' element={<UseStates/>}/>
       <Route path='useEffectApi' element={<UseEffectApi/>}/>
       <Route path='useRef' element={<UseRef/>}/>
+      <Route path='useReducer' element={<UseReducer/>}/>
       </Route>
       </Routes>
     </>
