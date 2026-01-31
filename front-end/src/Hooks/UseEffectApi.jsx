@@ -14,7 +14,7 @@ const UseEffectApi = () => {
                 <li key={index}>
                     <p>Name : {user.name}</p>
                     <p>Email : {user.email}</p>
-                    <p>Latitude : {user.address?.geo?.lat}</p>
+                    <p>Latitude  : {user.address?.geo?.lat}</p>
                 </li>
             ))}
         </ul>
