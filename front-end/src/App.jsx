@@ -63,11 +63,11 @@ import Login from './Auth/Login';
 import Hooks from './Hooks/Hook';
 import UseEffect from './Hooks/UseEffect'
 import UseEffectApi from './Hooks/UseEffectApi';
-import Signup from './Auth/signup';
 import UseRef from './Hooks/Useref';
 import UseReducer from './Hooks/UseReducer';
 import UseMemo from './Hooks/UseMemo';
 import UseCallback from './Hooks/UseCallback';
+import Signup from './component/Signup'
 
 const App = () =>{
   
